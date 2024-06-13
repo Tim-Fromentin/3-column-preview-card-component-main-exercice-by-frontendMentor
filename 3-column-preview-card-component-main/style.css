@@ -1,0 +1,118 @@
+html{box-sizing:border-box}*,::after,::before{box-sizing:inherit}body{margin:0;padding:0}ol,ul{list-style:none}a{text-decoration:none;color:inherit}
+
+/* Bright orange: 
+Dark cyan: 
+Very dark cyan: 
+
+### Neutral
+
+Transparent white (paragraphs): 
+Very light gray (background, headings, buttons): 
+
+## Typography
+
+### Body Copy
+
+- Font size: 15px
+
+### Font
+
+- Family: [Lexend Deca](https://fonts.google.com/specimen/Lexend+Deca)
+- Weights: 400
+
+- Family: [Big Shoulders Display](https://fonts.google.com/specimen/Big+Shoulders+Display)
+- Weights: 700 */
+:root {
+    --color-card-1: hsl(31, 77%, 52%);
+    --color-card-2: hsl(184, 100%, 22%);
+    --color-card-3: hsl(179, 100%, 13%);
+
+    --color-txt: hsla(0, 0%, 100%, 0.75);
+    --color-heading: hsl(0, 0%, 95%);
+
+    --ff-title: "Big Shoulders Display", sans-serif;
+}
+body {
+    font-size: 15px;
+    font-family: "Lexend Deca", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 50px 0;
+}
+.card_container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    max-width: 90%;
+}
+/* @media screen and (max-width: 835px) {
+    .card_container {
+    grid-template-columns: 1fr;
+
+    }
+    
+} */
+
+.card-title {
+    font-family: var(--ff-title);
+    font-weight: 700;
+}
+.card_1 {
+    background: var(--color-card-1);
+    border-radius: 5px 0 0 5px;
+}
+.card_2 {
+    background: var(--color-card-2);
+}
+.card_3 {
+    background: var(--color-card-3);
+    border-radius: 0px 5px 5px 0px;
+
+}
+
+.card {
+    padding: 50px;
+    min-height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: baseline;
+    color: var(--color-txt);
+}
+@media screen and (max-width: 768px) {
+    .card {
+        padding: 20px;
+    }
+}
+@media screen and (max-width: 610px) {
+    .card_container {
+    grid-template-columns: 1fr;
+    }
+    .card {
+        padding: 50px;
+    }
+}
+.card_title {
+    font-size: 2.5rem;
+    font-family: var(--ff-title);
+    text-transform: uppercase;
+    color: var(--color-heading);
+}
+.card_desc {
+    margin: 50px 0 100px 0;
+}
+.card_link {
+    background: var(--color-heading);
+    padding: 15px 30px;
+    border-radius: 50px;
+}
+.card_1 .card_link {
+    color: var(--color-card-1);
+}
+.card_2 .card_link {
+    color: var(--color-card-2);
+}
+.card_3 .card_link {
+    color: var(--color-card-3);
+}
